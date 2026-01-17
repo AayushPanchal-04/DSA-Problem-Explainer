@@ -10,26 +10,41 @@ st.set_page_config(
 
 # Custom CSS
 st.markdown("""
-    <style>
-    .main-header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #1f77b4;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .sub-header {
-        font-size: 1.2rem;
-        color: #555;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    </style>
+<style>
+/* Remove top padding */
+.block-container {
+    padding-top: 1.2rem;
+}
+
+/* Main Title */
+.main-header {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(90deg, #1E88E5, #42A5F5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle */
+.sub-header {
+    font-size: 1.4rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+</style>
 """, unsafe_allow_html=True)
 
 # Header
-st.markdown('<p class="main-header">🧠 DSA Problem Explainer Bot</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-header">Input any Data Structures & Algorithms problem and get a clear explanation!</p>', unsafe_allow_html=True)
+st.markdown("""
+<h1 style="text-align:center; font-size:4rem; font-weight:900; color:#1E88E5;">
+    🧠 DSA Problem Explainer Bot
+</h1>
+""", unsafe_allow_html=True)
+
+
 
 # Sidebar for API key
 with st.sidebar:
@@ -234,7 +249,7 @@ Use analogies and simple language. Avoid jargon unless you explain it."""
 # Footer
 st.markdown("---")
 st.markdown(f"""
-    <div style='text-align: center; color: #888; padding: 1rem;'>
-        Built with ❤️ using Streamlit & {api_provider} AI (FREE!)
-    </div>
+<div style='text-align: center; font-weight: bold;'>
+    Built by Aayush Panchal
+</div>
 """, unsafe_allow_html=True)
